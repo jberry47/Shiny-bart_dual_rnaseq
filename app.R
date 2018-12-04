@@ -16,9 +16,9 @@ sorg_data <- list(
   ntj2_mi = read.table("data/cuffdiff/cuffdiff__dualRNAseq_ntj2_m.x_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_180918/gene_exp.diff",header=T,sep="\t",stringsAsFactors = F),
   bs_mi = read.table("data/cuffdiff/cuffdiff__dualRNAseq_bs_m.x_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_180918/gene_exp.diff",header=T,sep="\t",stringsAsFactors = F),
   grassl_mi = read.table("data/cuffdiff/cuffdiff__dualRNAseq_grassl_m.x_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_180918/gene_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
-  mock_ntj2_bs = read.table("data/cuffdiff/cuffdiff_ntj2.mock_bs.mock_Sbicolor_454_v3.0.1_xhan_rnaseq1_sorg_reads_181204/gene_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
-  mock_ntj2_grassl = read.table("data/cuffdiff/cuffdiff_ntj2.mock_grassl.mock_Sbicolor_454_v3.0.1_xhan_rnaseq1_sorg_reads_181204/gene_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
-  mock_bs_grassl = read.table("data/cuffdiff/cuffdiff_grassl.mock_bs.mock_Sbicolor_454_v3.0.1_xhan_rnaseq1_sorg_reads_181204/gene_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
+  mock_ntj2_bs = read.table("data/cuffdiff/cuffdiff__dualRNAseq_bs.mock_ntj2.mock_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_181204/gene_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
+  mock_ntj2_grassl = read.table("data/cuffdiff/cuffdiff__dualRNAseq_grassl.mock_ntj2.mock_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_181204/gene_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
+  mock_bs_grassl = read.table("data/cuffdiff/cuffdiff__dualRNAseq_bs.mock_grassl.mock_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_181204/gene_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
   inf_ntj2_bs = read.table("data/cuffdiff/cuffdiff__dualRNAseq_ntj2.xanh_bs.xanh_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_180918/gene_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
   inf_ntj2_grassl = read.table("data/cuffdiff/cuffdiff__dualRNAseq_ntj2.xanh_grassl.xanh_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_180918/gene_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
   inf_bs_grassl = read.table("data/cuffdiff/cuffdiff__dualRNAseq_grassl.xanh_bs.xanh_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_180918/gene_exp.diff",header=T,sep = "\t",stringsAsFactors = F)
