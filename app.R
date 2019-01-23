@@ -13,21 +13,21 @@ library(ggplot2)
 library(openxlsx)
 
 sorg_data <- list(
-  ntj2_mi = read.table("data/cuffdiff/cuffdiff__dualRNAseq_ntj2_m.x_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_180918/gene_exp.diff",header=T,sep="\t",stringsAsFactors = F),
-  bs_mi = read.table("data/cuffdiff/cuffdiff__dualRNAseq_bs_m.x_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_180918/gene_exp.diff",header=T,sep="\t",stringsAsFactors = F),
-  grassl_mi = read.table("data/cuffdiff/cuffdiff__dualRNAseq_grassl_m.x_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_180918/gene_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
-  mock_ntj2_bs = read.table("data/cuffdiff/cuffdiff__dualRNAseq_bs.mock_ntj2.mock_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_181204/gene_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
-  mock_ntj2_grassl = read.table("data/cuffdiff/cuffdiff__dualRNAseq_grassl.mock_ntj2.mock_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_181204/gene_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
-  mock_bs_grassl = read.table("data/cuffdiff/cuffdiff__dualRNAseq_bs.mock_grassl.mock_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_181204/gene_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
-  inf_ntj2_bs = read.table("data/cuffdiff/cuffdiff__dualRNAseq_ntj2.xanh_bs.xanh_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_180918/gene_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
-  inf_ntj2_grassl = read.table("data/cuffdiff/cuffdiff__dualRNAseq_ntj2.xanh_grassl.xanh_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_180918/gene_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
-  inf_bs_grassl = read.table("data/cuffdiff/cuffdiff__dualRNAseq_grassl.xanh_bs.xanh_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_180918/gene_exp.diff",header=T,sep = "\t",stringsAsFactors = F)
+  ntj2_mi = read.table("data/cuffdiff/cuffdiff_classicfpkm_dispersionpercondition_dualRNAseq_ntj2_m.x_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_190118/gene_exp.diff",header=T,sep="\t",stringsAsFactors = F),
+  bs_mi = read.table("data/cuffdiff/cuffdiff_classicfpkm_dispersionpercondition_dualRNAseq_bs_m.x_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_190118/gene_exp.diff",header=T,sep="\t",stringsAsFactors = F),
+  grassl_mi = read.table("data/cuffdiff/cuffdiff_classicfpkm_dispersionpercondition_dualRNAseq_grassl_m.x_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_190118/gene_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
+  mock_ntj2_bs = read.table("data/cuffdiff/cuffdiff_classicfpkm_dispersionpercondition_dualRNAseq_bs.mock_ntj2.mock_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_190118/gene_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
+  mock_ntj2_grassl = read.table("data/cuffdiff_classicfpkm_dispersionpercondition_dualRNAseq_grassl.mock_ntj2.mock_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_190118/gene_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
+  mock_bs_grassl = read.table("data/cuffdiff/cuffdiff_classicfpkm_dispersionpercondition_dualRNAseq_bs.mock_grassl.mock_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_190118/gene_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
+  inf_ntj2_bs = read.table("data/cuffdiff/cuffdiff_classicfpkm_dispersionpercondition_dualRNAseq_ntj2.xanh_bs.xanh_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_190118/gene_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
+  inf_ntj2_grassl = read.table("data/cuffdiff/cuffdiff_classicfpkm_dispersionpercondition_dualRNAseq_ntj2.xanh_grassl.xanh_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_190118/gene_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
+  inf_bs_grassl = read.table("data/cuffdiff/cuffdiff_classicfpkm_dispersionpercondition_dualRNAseq_grassl.xanh_bs.xanh_Sbicolor_454_v3.0.1_xhan_rnaseq1_s.annot_190118/gene_exp.diff",header=T,sep = "\t",stringsAsFactors = F)
 )
 
 xanh_data <- list(
-  xanh_bs = read.table("data/cuffdiff/cuffdiff__dualRNAseq_xanh_bs.xanh_Sbicolor_454_v3.0.1_xhan_rnaseq1_xanh.annot_180918/isoform_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
-  xanh_ntj2 = read.table("data/cuffdiff/cuffdiff__dualRNAseq_xanh_ntj2.xanh_Sbicolor_454_v3.0.1_xhan_rnaseq1_xanh.annot_180918/isoform_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
-  xanh_grassl = read.table("data/cuffdiff/cuffdiff__dualRNAseq_xanh_grassl.xanh_Sbicolor_454_v3.0.1_xhan_rnaseq1_xanh.annot_180918/isoform_exp.diff",header=T,sep = "\t",stringsAsFactors = F)
+  xanh_bs = read.table("data/cuffdiff/cuffdiff_classicfpkm_dispersionpercondition_dualRNAseq_xanh_bs.xanh_Sbicolor_454_v3.0.1_xhan_rnaseq1_xanh.annot_190118/isoform_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
+  xanh_ntj2 = read.table("data/cuffdiff/cuffdiff_classicfpkm_dispersionpercondition_dualRNAseq_xanh_ntj2.xanh_Sbicolor_454_v3.0.1_xhan_rnaseq1_xanh.annot_190118/isoform_exp.diff",header=T,sep = "\t",stringsAsFactors = F),
+  xanh_grassl = read.table("data/cuffdiff/cuffdiff_classicfpkm_dispersionpercondition_dualRNAseq_xanh_grassl.xanh_Sbicolor_454_v3.0.1_xhan_rnaseq1_xanh.annot_190118/isoform_exp.diff",header=T,sep = "\t",stringsAsFactors = F)
 )
 
 sorg_annot <- read.table("data/sorg_annot.tsv",header=T,stringsAsFactors = F,sep="\t",quote = "",fill=T)
